@@ -1,4 +1,4 @@
 pythonBots
 ==========
 
-Collection of my python automated minions.
+Collection of my python minions.
