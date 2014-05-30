@@ -1,8 +1,19 @@
 #!c:/Python32/python.exe
 '''
 Created on May 05, 2014
-@todo: checks whether a course is open or not and then message and call me!
+@description: checks whether a course is open or not and then message and call me!
 @author: Poojan Khanpara
+
+@notes:
+Create Twilio developer account.
+Change the phone_no to your phone number.
+Change the account_sid to your Twilio account_sid
+Change the auth_token to your Twilio auth_token
+Change the twilioPhoneNumber to the Twilio number provided to you by Twilio
+Right now it checks for Summer courses of graduate level in 2014 in Computer Science Department,
+changing the url changes that.
+
+And please use it judiciously, don't kill our UTD servers and I'll not be liable for anything you do with this script.
 '''
 import requests
 import datetime
@@ -117,7 +128,7 @@ while 1:
             courses.append(parseCourse(row))
         CheckAndSMS(courses)
         print('Checked '+str(len(courses))+' courses at: ',str(datetime.datetime.now()))
-        time.sleep(60*60)
+        time.sleep(60*60*2)
 
     except KeyboardInterrupt as ke:
         print ('Program exited as per user request...',ke)
